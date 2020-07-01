@@ -12,19 +12,21 @@ try: #try/except was used to make sure that if the input is
     userFt == int(userFt)
 except ValueError:
     print('Not a number value!')
-    quit()
+    raise SystemExit
+
 
 userIn = (input('Any inches? '))
 try: #Same try/except for the inches input that was used for the feet
     userFt == int(userFt) and userFt == int(userFt)
+    #creating the variable that int values of feet and inches are then 
+#turned into the sum of inches. Feet times 12 + whatever inches where added 
+    userSumIn = ((int(userFt) * 12) + int(userIn))
 except ValueError:
     print('Not a number value!')
-    quit()
+    raise SystemExit
 
 
-#creating the variable that int values of feet and inches are then 
-#turned into the sum of inches. Feet times 12 + whatever inches where added
-userSumIn = ((int(userFt) * 12) + int(userIn))
+
     
 
 #functon doing the formula to return the 

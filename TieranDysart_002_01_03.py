@@ -16,7 +16,7 @@ even_board = ['b','d','f','h'] # the even letters
 odd_board =['a','c','e','g'] #the odd letters
 
 #user input value A-H and value 1-8 
-board_row,board_col = input('Please input a letter a-h and a number 1-8. Use a space for inputs ').split()
+board_row,board_col = input('Please input a letter a-h and a number 1-8. Put a space between inputs ').split()
 # takes to variables and assigns them based on users input. Letter first than number
 # don't do a letter first it will throw error
 user_letter = str(board_row) #this throws error cause looking for a string in the first input
@@ -27,14 +27,14 @@ def checker_board(user_letter,user_num): #function takes user inputs as arguemen
     if board_row in odd_board:
         #if found than moves on to the number, checks if number cant be divided by 2 
         if user_num % 2 != 0:
-            print(board_row,board_col,'is a black square')      
+            print(board_row+board_col,'is a black square')      
         else: # if the number is divisble by 2 then the square will be white 
-            print(board_row,board_col,'is white square')
+            print(board_row+board_col,'is white square')
     else: #the else is here if the letter the user inputs is in not in the odd_board 
         if user_num % 2 == 0: # number is divisble by 2 result black
-            print(board_row,board_col,'is a black square ')
+            print(board_row+board_col,'is a black square ')
         else: #else result white 
-            print(board_row,board_col,'is a white square')
+            print(board_row+board_col,'is a white square')
 
 
 
